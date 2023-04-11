@@ -1,0 +1,16 @@
+@model Movie
+
+<h2 class="border border-dark container mt-5 bg-primary text-white">@Model.Name</h2>
+
+<p>Duracion: @Model.Minutes</p>
+
+<p>@Model.Review</p>
+
+
+<form asp-action="Delete"
+asp-route-code="@Model.Code"
+onsubmit ="return confirm('Estas seguro que queres eliminar esta pelicula? ')">
+    <button type="submit" class="btn btn-danger alert-dismissible fade show" "alert alert-danger"> Eliminar pelicula</button>
+</form>
+
+
